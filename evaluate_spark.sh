@@ -16,7 +16,6 @@ value_channel_compression_ratio=${11:-"0"}
 extra_args=""
 extra_name=""
 
-
 if [ "$model" = "llama3-8b-inst" ];then
     model_name_or_path=meta-llama/Meta-Llama-3-8B-Instruct
 fi
