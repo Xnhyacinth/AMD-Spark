@@ -117,7 +117,7 @@ if __name__ == '__main__':
         ['random'],
         ['snapkv'],
         ['snap_think'],
-        ['snap_quark']
+        ['snap_spark']
     ]
     
     model2maxlen = json.load(open("longbench/config/model2maxlen.json", "r"))
@@ -127,12 +127,12 @@ if __name__ == '__main__':
         
         results_list[0].append(dataset)
         
-        for idx, method in enumerate(["full_kv", "streaming_llm", 'observed_attention', "expected_attention", "adasnapkv", "criti_snapkv", "tova", "random", "snapkv", "snap_think", 'snap_quark']):
+        for idx, method in enumerate(["full_kv", "streaming_llm", 'observed_attention', "expected_attention", "adasnapkv", "criti_snapkv", "tova", "random", "snapkv", "snap_think", 'snap_spark']):
             try:
                 args.method = method
                 args.dataset = dataset
                 if args.compress_q is not None:
-                    if 'snap_quark' in method:
+                    if 'snap_spark' in method:
                         prefix = ""
                         if args.threshold_ratio is not None:
                             prefix += f"__threshold{args.threshold_ratio}"
@@ -146,7 +146,7 @@ if __name__ == '__main__':
                     else:
                         args.eval_file = os.path.join("output_norm/results/Meta-Llama-3-8B-Instruct", 'compress_questions', args.tem, args.compress_ratio, 'longbench', dataset, f"{method}__max_context{max_context_length}.json")
                 else:
-                    if 'snap_quark' in method:
+                    if 'snap_spark' in method:
                         prefix = ""
                         if args.threshold_ratio is not None:
                             prefix += f"__threshold{args.threshold_ratio}"
