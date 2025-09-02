@@ -32,3 +32,18 @@ bash run4.sh # all baselines with think and spark
 The specific parameters can be found in the method's implementation in [spark_press](kvpress/presses/spark_press.py).
 
 For more methods (press), see `PRESS_DICT` in [eval.py](eval.py).
+
+
+### Citation
+
+If you find SparK or this project is helpful, please kindly consider cite our paper 😊.
+
+```bibtex
+@article{liao2025spark,
+  title={SparK: Query-Aware Unstructured Sparsity with Recoverable KV Cache Channel Pruning},
+  author={Liao, Huanxuan and Xu, Yixing and He, Shizhu and Li, Guanchen and Yin, Xuanwu and Li, Dong and Barsoum, Emad and Zhao, Jun and Liu, Kang},
+  journal={arXiv preprint arXiv:2508.15212},
+  year={2025}
+}
+```
+
