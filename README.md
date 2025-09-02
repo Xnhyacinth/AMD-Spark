@@ -1,4 +1,6 @@
+## SparK: Query-Aware Unstructured Sparsity with Recoverable KV Cache Channel Pruning
 
+**Huanxuan Liao, Yixing Xu, Shizhu He, Guanchen Li, Xuanwu Yin, Dong Li, Emad Barsoum, Jun Zhao, Kang Liu** | [Paper](https://arxiv.org/abs/2508.15212)
 
 
 ## Installation
